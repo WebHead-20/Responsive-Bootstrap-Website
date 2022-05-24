@@ -1,0 +1,546 @@
+/*=========================== 
+Google Font Link
+=============================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*=========================== 
+CSS Reset
+=============================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    color: #444;
+    overflow-x: hidden;
+}
+section{
+    padding: 80px 0;
+}
+h1{font-size: 60px;}
+h2{font-size: 36px;}
+h3{font-size: 25px;}
+h4{font-size: 20px;}
+h5{font-size: 18px;}
+h6{font-size: 16px;}
+
+h2,h3,h4,h5{
+    color: black;
+}
+
+/*=========================== 
+Reusable Classes
+=============================*/
+
+/* Colors */
+:root{
+    --deep-green: #009961;
+    --light-green: #18d26e;
+}
+/* Logo */
+.logo{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+.logo:hover{
+    color: white;
+}
+.logo .img-box{
+    width: 2.25rem;
+}
+
+/* Social Links */
+.social-links ul{
+    list-style: none;
+}
+.social-links ul li{
+    border-radius: 5px;
+    background-color: #1b1b1b;
+    padding: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    position: relative;
+}
+.social-links ul li a .icon{
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.social-links ul li:hover{
+    background-color: black;
+}
+.social-links ul li:hover .icon{
+    color: var(--light-green);
+}
+
+/* Overlay */
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+.button-1 a{
+    font-size: 18px;
+    border: 2px solid var(--deep-green);
+    border-radius: 30px;
+    color: white;
+    background-color: transparent;
+    font-weight: 500;
+}
+.button-1 a:hover{
+    background-color: var(--deep-green);
+    color: white!important;
+    border-color: var(--deep-green)!important;
+}
+.button-2 a{
+    font-size: 18px;
+    border: 2px solid var(--deep-green);
+    border-radius: 30px;
+    color: white;
+    background-color: var(--deep-green);
+    font-weight: 500;
+}
+.button-2 a:hover{
+    background-color: transparent;
+    color: var(--deep-green)!important;
+    border-color: var(--deep-green)!important;
+}
+
+
+/* Section Title */
+.section-title h2{
+    font-weight: 700;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+}
+.section-title p{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaa;
+}
+.section-title p::after{
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: var(--deep-green);
+    margin: 4px 10px;
+}
+
+/* Card */
+.card{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 2px;
+    border: none;
+}
+
+/*=========================== 
+Navbar
+=============================*/
+.navbar{
+    background-color: black;
+}
+.navbar-nav .nav-item{
+    margin: 5px 0.75rem;
+}
+.navbar-nav .nav-item .nav-link{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--light-green);
+}
+.navbar .menu-icon{
+    color: white;
+    font-size: 2.25rem;
+}
+.navbar-collapse.show .social-links{
+    padding-bottom: 1rem;
+}
+
+/*=========================== 
+Home
+=============================*/
+#home{
+    height: 100vh;
+    background-image: url(/Images/Home-BG.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#home .home-content{
+    position: relative;
+    z-index: 2;
+    padding-top: 50px;
+}
+#home .home-content h1{
+    color: white;
+    font-weight: 700;
+    text-shadow: 0px 0px black;
+}
+#home .home-content h4{
+    color: #eee;
+    font-weight: 500;
+    font-size: 24px;
+    text-shadow: 0px 0px black;
+}
+
+/*=========================== 
+About
+=============================*/
+#about .heading h3{
+    font-weight: 600;
+}
+#about .sub-heading {
+    font-style: italic;
+}
+#about .check-list{
+    list-style: none;
+    margin: 20px 0;
+}
+#about .check-list li p{
+    margin-bottom: 5px;
+}
+#about .check-list li p .icon{
+    margin-right: 5px;
+    font-size: 25px;
+    color: var(--deep-green);
+    transform: translateY(5px);
+}
+
+/*=========================== 
+Achievements
+=============================*/
+#achievements{
+    background-image: url(/Images/Acheivements-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    padding: 80px 0 60px 0;
+}
+#achievements .title{
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px; 
+}
+#achievements .title h2{
+    color: white;
+}
+#achievements .title p{
+    color: #f3f3f3;
+}
+.achievement-box{
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+}
+.achievement-box h2{
+    color: var(--light-green);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/*=========================== 
+Services
+=============================*/
+.service-card{
+    margin-bottom: 15px;
+    padding: 1rem 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.service-card .icon-box .icon{
+    color: var(--deep-green);
+    float: left;
+    font-size: 50px;
+    transform: translate(20px, 10px);
+}
+.service-card .card-title{
+    font-weight: 600;
+    margin-left: 6rem;
+    transition: color 0.3s ease-in-out;
+}
+.service-card .card-text{
+    font-size: 15px;
+    margin-left: 6rem;
+}
+.service-card:hover{
+    transform: translateY(-3%);
+    border-bottom-color: var(--deep-green);
+}
+.service-card:hover .card-title{
+    color: var(--deep-green);
+}
+
+/*=========================== 
+Pricing
+=============================*/
+
+.pricing-card{
+    border-top: 5px solid var(--deep-green);
+    margin-bottom: 15px;
+    padding: 1.5rem 3rem;
+}
+.pricing-card .card-title{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.pricing-card .price-block h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--deep-green);
+    margin: 0;
+    margin-right: 1rem;
+    position: relative;
+}
+.pricing-card .price-block h1 .currency{
+    font-size: 20px;
+    position: absolute;
+    left: -20px;
+    
+}
+.pricing-card .price-block h1 span{
+    font-size: 15px;
+    position: absolute;
+    right: -65px;
+    bottom: 10px;
+}
+.pricing-card ul{
+    list-style: none;
+    margin: 40px 0;
+}
+.pricing-card ul li{
+    margin-bottom: 16px;
+}
+.pricing-card ul li.na{
+    color: #ccc;
+    text-decoration: line-through;
+}
+.pricing-card .button-1 a{
+    color: var(--deep-green);
+}
+
+/*=========================== 
+Testimonials
+=============================*/
+#testimonials{
+    background-image: url(/Images/Review-Bg-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+.review-box .img-wrapper{
+    width: 6rem;
+    margin-bottom: 20px;
+}
+.review-box .img-wrapper img{
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.15);
+    margin: 0 auto;
+}
+.review-box h4{
+    color: white;
+    font-weight: 500;
+}
+.review-box span{
+    color: #ddd;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0 0 30px 0;
+}
+.review-box p{
+    margin: 0 auto 75px auto;
+    color: #eee;
+    width: 65%;
+    font-weight: 300;
+}
+.review-box p .icon{
+    transform: translateY(-2px);
+}
+
+/*=========================== 
+Team
+=============================*/
+#team{
+    padding-bottom: 0;
+    background-color: #f9f9f9;
+}
+#team .team-card{
+    margin-bottom: 10px;
+}
+#team .team-card .member-img{
+    position: relative;
+}
+#team .team-card .member-img .social-links{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+#team .team-card .member-img .social-links ul li{
+    padding: 15px;
+    margin-bottom: 15px;
+}
+#team .team-card:hover .social-links{
+    right: 10px;
+    opacity: 1;
+}
+#team .team-card h5{
+    font-weight: 700;
+}
+#team .team-card p{
+    font-size: 14px;
+}
+
+/*=========================== 
+Contact
+=============================*/
+
+#contact{
+    background-color: #f9f9f9;
+}
+
+/* Info Cards */
+.info-card{
+    padding: 28px 0;
+    background: white;
+}
+.info-card .icon-box{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.info-card .icon-box .icon{
+    color: var(--deep-green);
+    font-size: 35px;
+}
+.info-card h5{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.info-card p{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+/* Form */
+#contact form{
+    padding: 30px;
+    background-color: white;
+}
+#contact form .form-group{
+    margin-bottom: 20px;
+}
+#contact form input,
+#contact form textarea{
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+#contact form input:focus,
+#contact form textarea:focus{
+    border: 1px solid black;
+}
+#contact form textarea{
+    padding: 12px 15px;
+    outline: none;
+    height: 10rem;
+}
+#contact form button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+#contact form button .button-2 a{
+    border-radius: 5px;
+}
+
+/*=========================== 
+Footer
+=============================*/
+/* Footer Top */
+.footer-top{
+    padding-top: 60px;
+    padding-bottom: 10px;
+    background-color: #1b1b1b;
+    color: white;
+    font-size: 15px;
+}
+.footer-top .footer-box{
+    margin-bottom: 15px;
+    background-color: #111;
+    border-top: 4px solid var(--deep-green);
+    padding: 20px 0;
+}
+.footer-top .footer-box .logo{
+    margin-bottom: 15px;
+}
+
+.footer-top .title{
+    color: white;
+    margin-bottom: 20px;
+}
+.footer-top .footer-links ul {
+    list-style: none;
+}
+.footer-top .footer-links ul li{
+    padding-bottom: 15px;
+}
+.footer-top .footer-links ul li .links{
+    text-decoration: none;
+    color: #aaa;
+    margin-bottom: 1rem;
+    font-weight: 200;
+    font-size: 14px;
+}
+.footer-top .footer-links ul li .links:hover{
+    color: var(--light-green);
+}
+.footer-top .footer-news-letter form input{
+    padding: 3px;
+}
+.footer-top .footer-news-letter form button{
+    padding: 5px 10px;
+    background-color: var(--deep-green);
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+/* Footer Bottom */
+.footer-bottom{
+    background-color: black;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
